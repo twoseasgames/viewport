@@ -38,6 +38,10 @@ public class ImageView {
     public void setVisible(boolean visible) {
         layer.setVisible(visible);
     }
+    
+    public void setImage(Image image) {
+    	layer.setImage(image);
+    }
 
     public void paint() {
         if (sizeChanged == true) {
