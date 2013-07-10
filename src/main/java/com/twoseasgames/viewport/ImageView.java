@@ -21,6 +21,18 @@ public class ImageView {
         layer = graphics().createImageLayer(image);
     }
     
+    public ImageView(Image image, int x, int y) {
+    	this(image, new Rect(x, y, (int)image.width(), (int)image.height()));
+    }
+
+    public ImageView(Image image) {
+    	this(image, new Rect(0, 0, (int)image.width(), (int)image.height()));
+    }
+
+    public ImageLayer layer() {
+    	return layer;
+    }
+    
     public void setParent(Section parent) {
         this.parent = parent;
         realRect = parent.getRealRect(rect);
